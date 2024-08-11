@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navBar">
+                <li>Home</li>
+                <li>Quienes somos</li>
+                <li>Que tratamos</li>
+                <li>Educate</li> <!--menu display-->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+                <div class= "card-body">
+                    <div class="card-title">
+                        <h4>Simulador Servicios Médicos</h4>
+                        </div>
+                    <div class="name">
+                        <input type="text" placeholder="name" name="" id="name">
+                    </div>
+                    <div class="email">
+                        <input type="text" placeholder="Email" name="" id="email">
+                    </div>
+                    <div class="numero">
+                        <input type="text" placeholder="Number" name="" id="number">
+                    </div>
+                    <div class="button">
+                        <button class="send">Enviar</button>
+                    </div>
+                    <div class="message">
+                        <div class="success" id="success">Agendaste tu cita con exito!</div>
+                        <div class="danger" id="danger">Los campos no pueden estar vacios!</div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer class="container-footer-main">
+        <div>
+            <a class="link-footer" href="index.html">Clinica Manejo Dolor</a>
+            <div class="footer-icons">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <!-- <script src="../entrega-1/index.js"></script> -->
+    <script>
+        const mensajeBienvenida = 'Bienvenido a nuestro portal';
+
+        function getOptions() {
+            var Name = document.getElementById("name");
+            var email =  document.getElementById("email");
+            var number = document. getElementById("number");
+            const success = document.getElementById("success");
+            const danger = document.getElementById("danger");
+            
+            if(Name.value === "" || email.value === "" || number.value === ""){
+                danger.style.display = 'block';
+            } else{
+                setTimeout(() => {
+                Name.value= "";
+                email.value = "";
+                number.value = "";
+            }, 2000);
+            
+            success.style.display = "block";
+        }
+        
+        setTimeout(() => {
+            danger.style.display = 'none';
+            success.style.display = 'none';
+        }, 4000);      
+    }
+    
+    buttonHtml.addEventListener('click', getOptions);
+    </script>
+</body>
+</html>
