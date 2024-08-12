@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./index.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -53,36 +54,5 @@
         </div>
 
     </footer>
-    <!-- <script src="../entrega-1/index.js"></script> -->
-    <script>
-        const mensajeBienvenida = 'Bienvenido a nuestro portal';
-
-        function getOptions() {
-            var Name = document.getElementById("name");
-            var email =  document.getElementById("email");
-            var number = document. getElementById("number");
-            const success = document.getElementById("success");
-            const danger = document.getElementById("danger");
-            
-            if(Name.value === "" || email.value === "" || number.value === ""){
-                danger.style.display = 'block';
-            } else{
-                setTimeout(() => {
-                Name.value= "";
-                email.value = "";
-                number.value = "";
-            }, 2000);
-            
-            success.style.display = "block";
-        }
-        
-        setTimeout(() => {
-            danger.style.display = 'none';
-            success.style.display = 'none';
-        }, 4000);      
-    }
-    
-    buttonHtml.addEventListener('click', getOptions);
-    </script>
 </body>
 </html>
