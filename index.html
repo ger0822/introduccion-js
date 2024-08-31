@@ -14,7 +14,7 @@
                 <li>Home</li>
                 <li>Quienes somos</li>
                 <li>Que tratamos</li>
-                <li>Educate</li> <!--menu display-->
+                <li>Educate</li>
             </ul>
         </nav>
     </header>
@@ -23,7 +23,6 @@
                 <div class= "card-body">
                     <div class="card-title">
                         <h4>Simulador Servicios Médicos</h4>
-                        </div>
                     <div class="name">
                         <input type="text" placeholder="name" name="" id="name">
                     </div>
@@ -33,11 +32,18 @@
                     <div class="numero">
                         <input type="text" placeholder="Number" name="" id="number">
                     </div>
+                    <div class="entidades-disponibles">
+                        <select id="entidadesDropdown">
+                            <options value="">Seleccione una entidad</options>
+                            <!-- <options value="">ColSanitas</options>
+                            <options value="">Famisanar</options> -->
+                        </select>
+                    </div>
                     <div class="button">
                         <button class="send">Enviar</button>
                     </div>
                     <div class="message">
-                        <div class="success" id="success">Agendaste tu cita con exito!</div>
+                        <div class="success" id="success">Selecciona tu entidad de salud</div>
                         <div class="danger" id="danger">Los campos no pueden estar vacios!</div>
                     </div>
                 </div>
